@@ -44,9 +44,9 @@ for /l %%O in (0, %CHUNKSIZE%, %FILESIZE%) do (
     echo %DATE% %TIME:~0,-3% [!ERRORLEVEL!] %1 >&2
     :: Remove malformed file
     :: del %FILENAME% 2> nul
-  if defined RETRIED goto END
-  set RETRIED=1
-  goto START
+    if defined RETRIED goto END
+    set RETRIED=1
+    goto START
   )
 )
 
